@@ -1,0 +1,13 @@
+﻿@model AddProduct
+@{
+	 ViewData["Title"] = "Довавление в каталог";
+}
+<h6>@ViewData["Title"]</h6>
+
+<form method = "post">
+	Id   :<input type ="text" name ="id" required />
+	<br/>
+	Имя:<input type ="text" name ="name"  />
+	<br/>
+	<input type="submit" name="submit" value="Создать" />
+</form>
