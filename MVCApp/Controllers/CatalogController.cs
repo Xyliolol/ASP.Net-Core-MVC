@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCApp.Interface;
 using MVCApp.Models;
 
 namespace MVCApp.Controllers
@@ -6,10 +7,11 @@ namespace MVCApp.Controllers
     public class CatalogController : Controller
     {
         private static Catalog _catalog = new();
-
-        public CatalogController()
+        private object _lock = new object();
+        private readonly IEmailSender _emailSender;
+        public CatalogController(IEmailSender emailSender)
         {
-
+            _emailSender = emailSender;
         }
         [HttpGet]
         public IActionResult Products()
@@ -20,17 +22,24 @@ namespace MVCApp.Controllers
         [HttpPost]
         public IActionResult Products(Product product)
         {
+            lock (_lock)
+            {
+                _emailSender.SendEmailAsync(product);
+            }
             _catalog.ProductAdd(product);
             return RedirectToAction("Products");
         }
 
         [HttpPost, ActionName("ProductDelete")]
-        public IActionResult ProductDeleteConfirmed(int id)
+        public IActionResult ProductDeleteConfirmed(int id,Product product)
         {
+            lock (_lock)
+            {
+                _emailSender.SendEmailAsync(product);
+            }
             _catalog.ProductDelete(id);
             return RedirectToAction("Products");
         }
-
 
         [HttpGet]
         public IActionResult ProductsAdd()
