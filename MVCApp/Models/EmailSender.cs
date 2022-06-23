@@ -11,8 +11,8 @@ namespace MVCApp.Models
            
             string info = "добавлен новый товар";
             string message = $"Id: {product.Id}. Название: {product.Name}. Описание {product.Description}";
-            string FromEmail = "asp2022gb@rodion-m.ru";
-            string ToEmail = "jeeytis@yandex.ru";
+            string FromEmail =  "jeeytis@yandex.ru";
+            string ToEmail = "asp2022gb@rodion-m.ru";
             int portConnection = 25;
             string smtpServer = "smtp.beget.com";
             string password = "3drtLSa1";

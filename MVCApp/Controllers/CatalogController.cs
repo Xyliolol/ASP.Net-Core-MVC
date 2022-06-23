@@ -9,9 +9,11 @@ namespace MVCApp.Controllers
         private static Catalog _catalog = new();
         private object _lock = new object();
         private readonly IEmailSender _emailSender;
-        public CatalogController(IEmailSender emailSender)
+        private readonly ILogger<CatalogController> _logger;
+        public CatalogController(IEmailSender emailSender, ILogger<CatalogController> logger)
         {
             _emailSender = emailSender;
+            _logger = logger;
         }
         [HttpGet]
         public IActionResult Products()
@@ -21,12 +23,13 @@ namespace MVCApp.Controllers
 
         [HttpPost]
         public IActionResult Products(Product product)
-        {
+        { 
             lock (_lock)
             {
                 _emailSender.SendEmailAsync(product);
             }
             _catalog.ProductAdd(product);
+                    
             return RedirectToAction("Products");
         }
 
@@ -38,6 +41,7 @@ namespace MVCApp.Controllers
                 _emailSender.SendEmailAsync(product);
             }
             _catalog.ProductDelete(id);
+           
             return RedirectToAction("Products");
         }
 
