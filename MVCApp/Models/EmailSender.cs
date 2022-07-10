@@ -6,7 +6,7 @@ namespace MVCApp.Models
 {
     public class EmailSender : IEmailSender
     {
-        public async Task SendEmailAsync(Product product)
+        public async Task SendEmailAsync(Product product, CancellationTokenSource cancelTokenSource)
         {
            
             string info = "добавлен новый товар";
@@ -33,6 +33,7 @@ namespace MVCApp.Models
                 await client.SendAsync(mimeMessage);
                 await client.DisconnectAsync(true);
             }
+
         }
     }
 }

@@ -14,6 +14,8 @@ namespace MVCApp.Models
         public void ProductAdd(Product product)
         {
             _products.TryAdd(product.Id, product);
+            DomainEvent.Raise(new ProductAdded(product));
+            return;
         }
 
 

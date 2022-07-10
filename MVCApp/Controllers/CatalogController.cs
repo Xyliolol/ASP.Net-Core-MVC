@@ -10,23 +10,25 @@ namespace MVCApp.Controllers
         private object _lock = new object();
         private readonly IEmailSender _emailSender;
         private readonly ILogger<CatalogController> _logger;
+        CancellationTokenSource cancelTokenSource = new CancellationTokenSource();        
+
         public CatalogController(IEmailSender emailSender, ILogger<CatalogController> logger)
         {
             _emailSender = emailSender;
             _logger = logger;
         }
         [HttpGet]
-        public IActionResult Products()
+        public IActionResult Products(CancellationTokenSource cancelTokenSource)
         {
             return View(_catalog);
         }
 
         [HttpPost]
-        public IActionResult Products(Product product)
+        public IActionResult Products(Product product, CancellationTokenSource cancelTokenSource)
         { 
             lock (_lock)
             {
-                _emailSender.SendEmailAsync(product);
+                _emailSender.SendEmailAsync(product, cancelTokenSource);
             }
             _catalog.ProductAdd(product);
                     
@@ -34,11 +36,11 @@ namespace MVCApp.Controllers
         }
 
         [HttpPost, ActionName("ProductDelete")]
-        public IActionResult ProductDeleteConfirmed(int id,Product product)
+        public IActionResult ProductDeleteConfirmed(int id,Product product, CancellationTokenSource cancelTokenSource)
         {
             lock (_lock)
             {
-                _emailSender.SendEmailAsync(product);
+                _emailSender.SendEmailAsync(product, cancelTokenSource);
             }
             _catalog.ProductDelete(id);
            
@@ -46,13 +48,13 @@ namespace MVCApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult ProductsAdd()
+        public IActionResult ProductsAdd(CancellationTokenSource cancelTokenSource)
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult ProductDelete(int id)
+        public IActionResult ProductDelete(int id, CancellationTokenSource cancelTokenSource)
         {
             var product = _catalog.ProductsGetAll()
                 .FirstOrDefault(p => p.Id == id);
