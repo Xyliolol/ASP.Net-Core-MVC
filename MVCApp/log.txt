@@ -1,0 +1,58 @@
+2022-06-23 14:22:53.893 +03:00 [INF] User profile is available. Using 'C:\Users\79515\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-06-23 14:22:54.022 +03:00 [INF] Now listening on: https://localhost:7011
+2022-06-23 14:22:54.023 +03:00 [INF] Now listening on: http://localhost:5011
+2022-06-23 14:22:54.026 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-23 14:22:54.026 +03:00 [INF] Hosting environment: Development
+2022-06-23 14:22:54.027 +03:00 [INF] Content root path: C:\Users\79515\Desktop\ASP.NET core MVC\MVCApp\MVCApp\
+2022-06-23 14:22:54.651 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/ - -
+2022-06-23 14:22:54.723 +03:00 [INF] Executing endpoint 'MVCApp.Controllers.HomeController.Index (MVCApp)'
+2022-06-23 14:22:54.758 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller MVCApp.Controllers.HomeController (MVCApp).
+2022-06-23 14:22:54.769 +03:00 [INF] Executing ViewResult, running view Index.
+2022-06-23 14:22:54.902 +03:00 [INF] Executed ViewResult - view Index executed in 134.3413ms.
+2022-06-23 14:22:54.908 +03:00 [INF] Executed action MVCApp.Controllers.HomeController.Index (MVCApp) in 148.0233ms
+2022-06-23 14:22:54.910 +03:00 [INF] Executed endpoint 'MVCApp.Controllers.HomeController.Index (MVCApp)'
+2022-06-23 14:22:54.912 +03:00 [INF] HTTP GET / responded 200 in 193.1599 ms
+2022-06-23 14:22:54.937 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/ - - - 200 - text/html;+charset=utf-8 291.2115ms
+2022-06-23 14:22:54.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - -
+2022-06-23 14:22:54.963 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 3.0765ms
+2022-06-23 14:22:56.069 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/Catalog/Products - -
+2022-06-23 14:22:56.072 +03:00 [INF] Executing endpoint 'MVCApp.Controllers.CatalogController.Products (MVCApp)'
+2022-06-23 14:22:56.074 +03:00 [INF] Route matched with {action = "Products", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller MVCApp.Controllers.CatalogController (MVCApp).
+2022-06-23 14:22:56.077 +03:00 [INF] Executing ViewResult, running view Products.
+2022-06-23 14:22:56.090 +03:00 [INF] Executed ViewResult - view Products executed in 13.9421ms.
+2022-06-23 14:22:56.090 +03:00 [INF] Executed action MVCApp.Controllers.CatalogController.Products (MVCApp) in 15.4484ms
+2022-06-23 14:22:56.091 +03:00 [INF] Executed endpoint 'MVCApp.Controllers.CatalogController.Products (MVCApp)'
+2022-06-23 14:22:56.091 +03:00 [INF] HTTP GET /Catalog/Products responded 200 in 19.3795 ms
+2022-06-23 14:22:56.093 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/Catalog/Products - - - 200 - text/html;+charset=utf-8 23.6509ms
+2022-06-23 14:22:56.110 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - -
+2022-06-23 14:22:56.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 1.0771ms
+2022-06-23 14:22:56.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/Catalog/ProductsAdd - -
+2022-06-23 14:22:56.831 +03:00 [INF] Executing endpoint 'MVCApp.Controllers.CatalogController.ProductsAdd (MVCApp)'
+2022-06-23 14:22:56.832 +03:00 [INF] Route matched with {action = "ProductsAdd", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductsAdd() on controller MVCApp.Controllers.CatalogController (MVCApp).
+2022-06-23 14:22:56.833 +03:00 [INF] Executing ViewResult, running view ProductsAdd.
+2022-06-23 14:22:56.870 +03:00 [INF] Executed ViewResult - view ProductsAdd executed in 37.6356ms.
+2022-06-23 14:22:56.871 +03:00 [INF] Executed action MVCApp.Controllers.CatalogController.ProductsAdd (MVCApp) in 38.9508ms
+2022-06-23 14:22:56.873 +03:00 [INF] Executed endpoint 'MVCApp.Controllers.CatalogController.ProductsAdd (MVCApp)'
+2022-06-23 14:22:56.873 +03:00 [INF] HTTP GET /Catalog/ProductsAdd responded 200 in 42.6557 ms
+2022-06-23 14:22:56.875 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/Catalog/ProductsAdd - - - 200 - text/html;+charset=utf-8 46.8787ms
+2022-06-23 14:22:56.897 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - -
+2022-06-23 14:22:56.897 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 0.8539ms
+2022-06-23 14:23:01.161 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7011/Catalog/Products application/x-www-form-urlencoded 372
+2022-06-23 14:23:01.163 +03:00 [INF] Executing endpoint 'MVCApp.Controllers.CatalogController.Products (MVCApp)'
+2022-06-23 14:23:01.172 +03:00 [INF] Route matched with {action = "Products", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products(MVCApp.Models.Product) on controller MVCApp.Controllers.CatalogController (MVCApp).
+2022-06-23 14:23:01.276 +03:00 [INF] Executing RedirectResult, redirecting to /Catalog/Products.
+2022-06-23 14:23:01.277 +03:00 [INF] Executed action MVCApp.Controllers.CatalogController.Products (MVCApp) in 103.2715ms
+2022-06-23 14:23:01.277 +03:00 [INF] Executed endpoint 'MVCApp.Controllers.CatalogController.Products (MVCApp)'
+2022-06-23 14:23:01.278 +03:00 [INF] HTTP POST /Catalog/Products responded 302 in 115.0587 ms
+2022-06-23 14:23:01.279 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7011/Catalog/Products application/x-www-form-urlencoded 372 - 302 0 - 117.6513ms
+2022-06-23 14:23:01.281 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/Catalog/Products - -
+2022-06-23 14:23:01.281 +03:00 [INF] Executing endpoint 'MVCApp.Controllers.CatalogController.Products (MVCApp)'
+2022-06-23 14:23:01.282 +03:00 [INF] Route matched with {action = "Products", controller = "Catalog"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller MVCApp.Controllers.CatalogController (MVCApp).
+2022-06-23 14:23:01.285 +03:00 [INF] Executing ViewResult, running view Products.
+2022-06-23 14:23:01.292 +03:00 [INF] Executed ViewResult - view Products executed in 6.7348ms.
+2022-06-23 14:23:01.293 +03:00 [INF] Executed action MVCApp.Controllers.CatalogController.Products (MVCApp) in 7.4011ms
+2022-06-23 14:23:01.293 +03:00 [INF] Executed endpoint 'MVCApp.Controllers.CatalogController.Products (MVCApp)'
+2022-06-23 14:23:01.294 +03:00 [INF] HTTP GET /Catalog/Products responded 200 in 12.2240 ms
+2022-06-23 14:23:01.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/Catalog/Products - - - 200 - text/html;+charset=utf-8 14.4921ms
+2022-06-23 14:23:01.311 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - -
+2022-06-23 14:23:01.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7011/_framework/aspnetcore-browser-refresh.js - - - 200 11940 application/javascript;+charset=utf-8 0.8474ms

@@ -1,0 +1,58 @@
+﻿@model Catalog
+
+@{
+	 ViewData["Title2"] = "Список товаров";
+}
+ <h1>Список товаров</h1>
+
+<p>
+    <a asp-action="ProductsAdd">Добавить новый товар</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Имя
+            </th>
+            <th>
+                Описание
+            </th>
+            <th>
+                Цена
+            </th>
+            <th>
+                Изображение
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ProductsGetAll())
+        {
+            <tr>
+                <td>
+                    @item.Id |
+                </td>
+                <td>
+                    @item.Name |
+                </td>
+                <td>
+                    @item.Description |
+                </td>
+                <td>
+                    @item.Price |
+                </td>
+                <td>
+                    <img src="@item.Image" alt="Product photo.">
+                </td>
+                <td>
+                    <a asp-action="ProductDelete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
